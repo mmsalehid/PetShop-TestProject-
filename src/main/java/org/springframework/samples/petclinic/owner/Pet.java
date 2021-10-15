@@ -133,4 +133,10 @@ public class Pet extends NamedEntity {
 		visit.setPetId(this.getId());
 	}
 
+
+	@Override
+	public boolean equals(Object obj) {
+		Pet pet = (Pet) obj;
+		return this.getId().equals(pet.getId()) && this.getName().equals(pet.getName());
+	}
 }

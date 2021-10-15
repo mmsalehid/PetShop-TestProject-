@@ -78,4 +78,9 @@ public class Visit extends BaseEntity {
 		this.petId = petId;
 	}
 
+	@Override
+	public boolean equals(Object obj){
+		Visit other = (Visit) obj;
+		return this.date.equals(other.getDate());
+	}
 }
